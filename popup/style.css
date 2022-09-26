@@ -1,0 +1,61 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+body {
+  background: #3494e6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ec6ead,
+    #3494e6
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ec6ead,
+    #3494e6
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.popup-btn {
+  cursor: pointer;
+  width: 100px;
+  height: 35px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: none;
+}
+.popup {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  background-color: #fff;
+  transform: translate(-50%, -50%) scale(0);
+  padding: 15px;
+  max-height: 100%;
+  border: 1px solid black;
+}
+.popup.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+.popup .fas.fa-times {
+  position: absolute;
+  font-size: 15px;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+}
+.black-panel {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.black-panel.active {
+  opacity: 1;
+  pointer-events: all;
+}
